@@ -46,64 +46,64 @@ Aluguel	Registros de aluguéis	ID_Aluguel (PK), Data, Status
 Tabelas do Sistema:
 ATENDENTE
 
-CPF (VARCHAR(11), PK)
+ CPF (VARCHAR(11), PK)
 
-Nome_Completo (VARCHAR(100))
+ Nome_Completo (VARCHAR(100))
 
-CLIENTE
+ CLIENTE
 
-CPF (VARCHAR(11), PK)
+ CPF (VARCHAR(11), PK)
 
-Nome (VARCHAR(100))
+ Nome (VARCHAR(100))
 
-Telefone (VARCHAR(15))
+ Telefone (VARCHAR(15))
 
-Endereco (VARCHAR(150))
+ Endereco (VARCHAR(150))
 
-Email (VARCHAR(100))
+ Email (VARCHAR(100))
 
-Atendente_Responsavel (VARCHAR(11), FK → ATENDENTE)
+ Atendente_Responsavel (VARCHAR(11), FK → ATENDENTE)
 
 JOGO
 
-Codigo_Jogo (INT, PK)
+ Codigo_Jogo (INT, PK)
 
-Nome_Jogo (VARCHAR(100))
+ Nome_Jogo (VARCHAR(100))
 
-Nome_Fabricante (VARCHAR(100))
+ Nome_Fabricante (VARCHAR(100))
 
-Max_Jogadores (INTEGER)
+ Max_Jogadores (INTEGER)
 
-Ano_Publicacao (INTEGER)
+ Ano_Publicacao (INTEGER)
 
-Copias_Disponiveis (INTEGER)
+ Copias_Disponiveis (INTEGER)
 
-Atendente_Responsavel (VARCHAR(11), FK → ATENDENTE)
+ Atendente_Responsavel (VARCHAR(11), FK → ATENDENTE)
 
 ALUGUEL
 
-ID_Aluguel (SERIAL, PK)
+ ID_Aluguel (SERIAL, PK)
 
-Codigo_Jogo (INT, FK → JOGO)
+ Codigo_Jogo (INT, FK → JOGO)
 
-CPF_Cliente (VARCHAR(11), FK → CLIENTE)
+ CPF_Cliente (VARCHAR(11), FK → CLIENTE)
 
-Data_Aluguel (DATE)
+ Data_Aluguel (DATE)
 
-Atendente_Responsavel (VARCHAR(11), FK → ATENDENTE)
+ Atendente_Responsavel (VARCHAR(11), FK → ATENDENTE)
 
-Status_Emprestimo (VARCHAR(20))
+ Status_Emprestimo (VARCHAR(20))
 
 3. Relacionamentos
-Atendente → Cliente (1:N) - Um atendente cadastra vários clientes
+ Atendente → Cliente (1:N) - Um atendente cadastra vários clientes
 
-Atendente → Jogo (1:N) - Um atendente cadastra vários jogos
+ Atendente → Jogo (1:N) - Um atendente cadastra vários jogos
 
-Atendente → Aluguel (1:N) - Um atendente registra vários aluguéis
+ Atendente → Aluguel (1:N) - Um atendente registra vários aluguéis
 
-Cliente → Aluguel (1:N) - Um cliente pode ter vários aluguéis
+ Cliente → Aluguel (1:N) - Um cliente pode ter vários aluguéis
 
-Jogo → Aluguel (1:N) - Um jogo pode ser alugado várias vezes
+ Jogo → Aluguel (1:N) - Um jogo pode ser alugado várias vezes
 
 📋 Funcionalidades do Sistema
 Cadastros:
